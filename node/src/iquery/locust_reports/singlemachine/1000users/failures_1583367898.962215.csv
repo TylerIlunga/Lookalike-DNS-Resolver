@@ -1,0 +1,9 @@
+"Method","Name","Error","Occurrences"
+"input","no_ip_query_input","[Errno 8] nodename nor servname provided, or not known",79
+"input","no_ip_query_input","[Errno 24] Too many open files",41
+"input","bing_ip_query_input","[Errno 8] nodename nor servname provided, or not known",75
+"input","facebook_ip_query_input","[Errno 24] Too many open files",33
+"input","bing_ip_query_input","[Errno 24] Too many open files",38
+"input","uber_ip_query_input","[Errno 24] Too many open files",37
+"input","uber_ip_query_input","[Errno 8] nodename nor servname provided, or not known",78
+"input","facebook_ip_query_input","[Errno 8] nodename nor servname provided, or not known",70

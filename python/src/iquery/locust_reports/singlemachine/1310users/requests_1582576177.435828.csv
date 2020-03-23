@@ -1,0 +1,6 @@
+"Type","Name","# requests","# failures","Median response time","Average response time","Min response time","Max response time","Average Content Size","Requests/s","Requests Failed/s","50%","66%","75%","80%","90%","95%","98%","99%","99.9%","99.99%","99.999","100%"
+"input","bing_ip_query_input",5508,0,0,0,0,0,84,175.10,0.00,0,0,0,0,0,0,0,0,0,0,0,0
+"input","facebook_ip_query_input",5542,0,0,0,0,0,86,176.19,0.00,0,0,0,0,0,0,0,0,0,0,0,0
+"input","no_ip_query_input",5462,0,0,0,0,0,24,173.64,0.00,0,0,0,0,0,0,0,0,0,0,0,0
+"input","uber_ip_query_input",5429,0,0,0,0,0,82,172.59,0.00,0,0,0,0,0,0,0,0,0,0,0,0
+"None","Aggregated",21941,0,0,0,0,0,69,697.52,0.00,0,0,0,0,0,0,0,0,0,0,0,0

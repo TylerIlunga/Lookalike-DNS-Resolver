@@ -1,0 +1,15 @@
+{
+  "name": "one-trick-dns-resolver",
+  "version": "1.0.0",
+  "description": "\"Node.js implementation of the one-trick DNS resolver\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "locust"
+  },
+  "author": "Tyler Ilunga",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "dotenv": "^8.2.0"
+  }
+}

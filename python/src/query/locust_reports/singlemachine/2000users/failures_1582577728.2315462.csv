@@ -1,0 +1,9 @@
+"Method","Name","Error","Occurrences"
+"input","facebook_domain_query_input","[Errno 8] nodename nor servname provided, or not known",160
+"input","no_domain_query_input","[Errno 24] Too many open files",244
+"input","uber_domain_query_input","[Errno 24] Too many open files",247
+"input","bing_domain_query_input","[Errno 24] Too many open files",245
+"input","uber_domain_query_input","[Errno 8] nodename nor servname provided, or not known",162
+"input","no_domain_query_input","[Errno 8] nodename nor servname provided, or not known",180
+"input","bing_domain_query_input","[Errno 8] nodename nor servname provided, or not known",141
+"input","facebook_domain_query_input","[Errno 24] Too many open files",234
