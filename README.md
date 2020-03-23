@@ -1,3 +1,7 @@
+# References
+
+- [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt)
+
 # Steps
 
 ### Python
