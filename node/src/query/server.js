@@ -188,11 +188,14 @@ class DNSMessage {
       qname,
       qtype,
       qclass,
-      additional: aaRecords,
       bytes: buffer,
     };
+    this.msgAuthority = {};
+    this.msgAdditional = aaRecords;
 
     console.log('this.msgQuestion:', this.msgQuestion);
+    console.log('this.msgAuthority:', this.msgAuthority);
+    console.log('this.msgAdditional:', this.msgAdditional);
   }
 
   buildAnswer() {
@@ -224,7 +227,7 @@ class DNSMessage {
 
     const qnameAscii = newQnameBuffer.toString('ascii');
     const domainIpTmpMap = { [qnameAscii]: Buffer.from('00000000', 'hex') };
-    Object.keys(DNS_ZONE_MAP).forEach(domain => {
+    Object.keys(DNS_ZONE_MAP).forEach((domain) => {
       if (domainIpTmpMap[domain] !== undefined) {
         domainIpTmpMap[domain] = DNS_ZONE_MAP[domain];
       }
@@ -247,8 +250,8 @@ class DNSMessage {
       header: this.msgHeader,
       question: this.msgQuestion,
       answer: this.msgAnswer,
-      authority: {},
-      additional: {},
+      authority: this.msgAuthority,
+      additional: this.msgAdditional,
     };
   }
 
@@ -261,12 +264,14 @@ class DNSMessage {
       headerBytes.length + questionBytes.length,
     );
 
-    Object.values(message.answer).forEach(buffer => {
+    Object.values(message.answer).forEach((buffer) => {
       response = Buffer.concat(
         [response, buffer],
         response.length + buffer.length,
       );
     });
+
+    response = Buffer.concat([response, this.msgAdditional]);
 
     console.log('response:', response);
     return response;
@@ -275,7 +280,7 @@ class DNSMessage {
 
 const MessageHandler = new MainHandler();
 
-server.on('error', error => {
+server.on('error', (error) => {
   console.log(chalk.red('ERROR from Datagram Socket:'));
   console.error(error);
 });
@@ -285,7 +290,7 @@ server.on('listening', () => {
   console.log(chalk.cyan('LISTENING: ') + `${address}:${port}`);
 });
 
-server.on('connect', s => {
+server.on('connect', (s) => {
   console.log(chalk.green('NEW CONNECTION'));
 });
 
